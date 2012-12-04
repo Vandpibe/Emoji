@@ -2,6 +2,8 @@
 
 namespace Vandpibe\Emoji;
 
+use Symfony\Component\Finder\Finder;
+
 /**
  * @package Vandpibe
  */

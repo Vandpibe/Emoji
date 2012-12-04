@@ -1,5 +1,5 @@
 {
-    "name" : "vandpive/emoji",
+    "name" : "vandpibe/emoji",
     "autoload" : {
         "psr-0" : { "Vandpibe\\Emoji" : "src" }
     },
