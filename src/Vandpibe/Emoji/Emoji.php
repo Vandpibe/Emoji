@@ -73,19 +73,8 @@ class Emoji implements \IteratorAggregate, \Countable
             return;
         }
 
-        $this->finder->files()->name('*.png');
-
-        foreach ($this->finder->in($this->path) as $file) {
-            $this->emojis[] = substr($file->getFilename(), 0, -4);
+        foreach (glob($this->path . '/*.png') as $file) {
+            $this->emojis[] = substr(basename($file), 0, -4);
         }
-    }
-
-    /**
-     * Returns the filename minus the extension which is used as a 
-     * @param \SplFileInfo $file
-     */
-    protected function file(\SplFileInfo $file)
-    {
-        return substr($file->getFilename(), 0, -4);
     }
 }
