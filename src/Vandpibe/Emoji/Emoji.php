@@ -2,8 +2,6 @@
 
 namespace Vandpibe\Emoji;
 
-use Symfony\Component\Finder\Finder;
-
 /**
  * @package Vandpibe
  */
@@ -14,12 +12,10 @@ class Emoji implements \IteratorAggregate, \Countable
 
     /**
      * @param string $path
-     * @param Finder $finder
      */
-    public function __construct($path = null, Finder $finder = null)
+    public function __construct($path = null)
     {
         $this->path   = $path ?: __DIR__ . '/Resources/images';
-        $this->finder = $finder ?: new Finder();
     }
 
     /**
