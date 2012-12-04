@@ -1,0 +1,9 @@
+{
+    "name" : "vandpive/emoji",
+    "autoload" : {
+        "psr-0" : { "Vandpibe\\Emoji" : "src" }
+    },
+    "require" : {
+        "symfony/finder" : "~2.1"
+    }
+}
