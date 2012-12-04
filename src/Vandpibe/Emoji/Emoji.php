@@ -18,8 +18,8 @@ class Emoji implements \IteratorAggregate, \Countable
      */
     public function __construct($path = null, Finder $finder = null)
     {
-        $path   = $path ?: __DIR__ . '/Resources/images';
-        $finder = $finder ?: new Finder();
+        $this->path   = $path ?: __DIR__ . '/Resources/images';
+        $this->finder = $finder ?: new Finder();
     }
 
     /**
