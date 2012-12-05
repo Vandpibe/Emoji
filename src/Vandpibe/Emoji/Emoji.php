@@ -69,6 +69,8 @@ class Emoji implements \IteratorAggregate, \Countable
             return;
         }
 
+        $this->initialized = true;
+
         foreach (glob($this->path . '/*.png') as $file) {
             $this->emojis[] = substr(basename($file), 0, -4);
         }
